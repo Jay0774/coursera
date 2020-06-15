@@ -1,0 +1,42 @@
+# commands run on day one..
+
+1  MY_BUCKET_NAME_1=qwiklabs-gcp-02-45751bb2fd86
+    2  MY_BUCKET_NAME_2=jayesh
+    3  MY_REGION=us-central1
+    4  ls
+    5  gsutil mb gs://$jayesh
+    6  gsutil mb gs://$MY_BUCKET_NAME_2
+    7  gcloud compute zones list | grep $MY_REGION
+    8  MY_ZONE=us-central1-c
+    9  gcloud config set compute/zone $MY_ZONE
+   10  MY_VMNAME=second-vm
+   11  gcloud compute instances create $MY_VMNAME --machine-type "n1-standard-1" --image-project "debian-cloud" --image-family "debian-9" --subnet "default"
+   12  gcloud compute instances list
+   13  gcloud iam service-accounts create test-service-account2 --display-name "test-service-account2"
+   14  gsutil cp gs://cloud-training/ak8s/cat.jpg cat.jpg
+   15  gsutil cp cat.jpg gs://$MY_BUCKET_NAME_1
+   16  gsutil cp gs://$MY_BUCKET_NAME_1/cat.jpg gs://$MY_BUCKET_NAME_2/cat.jpg
+   17  gsutil acl get gs://$MY_BUCKET_NAME_1/cat.jpg  > acl.txt
+   18  cat acl.txt
+   19  gsutil acl set private gs://$MY_BUCKET_NAME_1/cat.jpg
+   20  gsutil acl get gs://$MY_BUCKET_NAME_1/cat.jpg  > acl-2.txt
+   21  cat acl-2.txt
+   22  gcloud config list
+   23  gcloud auth activate-service-account --key-file credentials.json
+   24  gcloud config list
+   25  gcloud auth list
+   26  gsutil cp gs://$MY_BUCKET_NAME_1/cat.jpg ./cat-copy.jpg
+   27  gsutil cp gs://$MY_BUCKET_NAME_2/cat.jpg ./cat-copy.jpg
+   28  gcloud config set account student-02-86cd023e78d9@qwiklabs.net
+   29  gsutil cp gs://$MY_BUCKET_NAME_1/cat.jpg ./copy2-of-cat.jpg
+   30  gsutil iam ch allUsers:objectViewer gs://$MY_BUCKET_NAME_1
+   31  git clone https://github.com/googlecodelabs/orchestrate-with-kubernetes.git
+   32  mkdir test
+   33  cat cleanup.sh
+   34  cd orchestrate-with-kubernetes
+   35  cat cleanup.sh
+   36  gcloud compute scp index.html first-vm:index.nginx-debian.html --zone=us-central1-c
+   37  sudo cp index.nginx-debian.html /var/www/html
+   38  history
+   
+   
