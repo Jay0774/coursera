@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jayesh Budhwani php</title>
+</head>
+<body>
+<h1>Jayesh Budhwani php</h1>
+<p>The SHA256 hash of "Jayesh Budhwani" is
+<?php
+print hash('sha256','Jayesh Budhwani');
+?>
+</p>
+<pre>ASCII ART:
+            			*
+            			*
+            			*
+	            		*
+	            		*
+	            		*
+	            		*
+		            	*
+	*		            *
+	*		            *
+	 ***************	
+</pre>
+<a href="check.php">Click here to check the error setting</a>
+<br/>
+<a href="fail.php">Click here to cause a traceback</a>
+</body>
