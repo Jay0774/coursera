@@ -1,0 +1,28 @@
+# first file to check working of pygame library and functions also display the screen but no close button.
+
+
+import pygame,sys,os
+from pygame.locals import * # importing all files
+
+red=(255,0,0)
+
+# initializing pygame
+
+pygame.init()
+
+# set up window
+
+window = pygame.display.set_mode((1000,600))
+pygame.display.set_caption('Slither.eat - The Snake Game')
+
+# set up drawing surface
+screen = pygame.display.get_surface()
+screen.fill(red)
+pygame.display.set_caption("Snake")
+pygame.display.flip()
+
+while True:
+    print("Slither.eat - The Snake Game!")
+    pass
+
+ 
